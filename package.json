@@ -1,11 +1,8 @@
 {
-  "name": "eslint-config-benzinga",
+  "name": "@benzinga/eslint-config-benzinga",
   "description": "Eslint config benzinga style",
   "version": "1.0.0",
-  "author": {
-    "email": "dev@benzinga.com",
-    "name": "Benzinga"
-  },
+  "author": "Benzinga <dev@benzinga.com>",
   "dependencies": {
     "eslint-config-standard-jsx": "^1.0.0",
     "eslint-plugin-import": "latest",
@@ -17,10 +14,15 @@
   "license": "MIT",
   "main": "index.js",
   "maintainers": [
-    {
-      "email": "dev@benzinga.com",
-      "name": "benzinga"
-    }
+    "Benzinga <dev@benzinga.com>"
   ],
-  "scripts": {}
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benzinga/eslint-config-benzinga.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Benzinga/eslint-config-benzinga/issues"
+  },
+  "homepage": "https://github.com/Benzinga/eslint-config-benzinga#readme"
 }
