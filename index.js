@@ -231,7 +231,7 @@ module.exports = {
     "yield-star-spacing": "error",
 
     // immutable ***************************************************************
-    "immutable/no-mutation": "warn",
+    "immutable/no-mutation": "off",
 
     // flowtype ****************************************************************
     "flowtype/no-dupe-keys": "error",
@@ -239,6 +239,7 @@ module.exports = {
     "flowtype/object-type-delimiter": "error",
     "flowtype/require-variable-type": "off",
     "flowtype/sort-keys": "error",
+    "flowtype/semi": ["error", "always"],
 
     // import ******************************************************************
     // static analysis
@@ -274,16 +275,16 @@ module.exports = {
     "import/no-duplicates": "error",
     "import/no-named-default": "error",
     "import/no-namespace": "error",
-    "import/no-unassigned-import": "error",
+    "import/no-unassigned-import": "off",
     "import/order": "off",
-    "import/prefer-default-export": "error",
+    "import/prefer-default-export": "off",
 
     // lodash ******************************************************************
     "lodash/identity-shorthand": ["error", "always"],
     "lodash/matches-prop-shorthand": ["error", "never"],
     "lodash/matches-shorthand": ["error", "always"],
     "lodash/prefer-lodash-method": "off",
-    "lodash/prefer-lodash-typecheck": "warn",
+    "lodash/prefer-lodash-typecheck": "off",
     "lodash/prefer-noop": "off",
     "lodash/preferred-alias": "off",
 
@@ -330,7 +331,7 @@ module.exports = {
     "react/require-default-props": "warn",
     "react/require-optimization": "warn",
     "react/self-closing-comp": "error",
-    "react/sort-comp": ["error", { "order": [ "constructor", "static-methods", "lifecycle", "everything-else", "render" ]}],
+    "react/sort-comp": [ "error", { "order": [ "type-annotations", "static-methods", "lifecycle", "everything-else", "render" ] } ],
     "react/sort-prop-types": "off", // FlowType makes irrelevant
     "react/style-prop-object": "error"
   },
