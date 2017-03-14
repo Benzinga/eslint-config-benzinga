@@ -5,8 +5,9 @@ module.exports = {
     "allowImportExportEverywhere": false
   },
   "plugins": [
-    "immutable",
+    "babel",
     "flowtype",
+    "immutable",
     "import",
     "lodash",
     "mocha",
@@ -28,6 +29,7 @@ module.exports = {
     // eslint *****************************************************************
     // Possible Errors
     "no-await-in-loop": "off",
+    "no-compare-neg-zero": "error",
     "no-extra-parens": "off",
     "no-prototype-builtins": "error",
     "no-template-curly-in-string": "error",
@@ -63,7 +65,7 @@ module.exports = {
     "no-implicit-coercion": "error",
     "no-implicit-globals": "off",
     "no-implied-eval": "error",
-    "no-invalid-this": "error",
+    "no-invalid-this": "off", // handled by babel plugin
     "no-iterator": "error",
     "no-labels": "error",
     "no-lone-blocks": "error",
@@ -71,11 +73,11 @@ module.exports = {
     "no-magic-numbers": "off",
     "no-multi-spaces": "off",
     "no-multi-str": "error",
+    "no-new": "error",
     "no-new-func": "error",
     "no-new-wrappers": "error",
-    "no-new": "error",
     "no-octal-escape": "error",
-    "no-param-reassign": "error",
+    "no-param-reassign": "off",
     "no-proto": "error",
     "no-restricted-properties": "off",
     "no-return-assign": "error",
@@ -93,6 +95,7 @@ module.exports = {
     "no-void": "error",
     "no-warning-comments": "off",
     "no-with": "error",
+    "prefer-promise-reject-errors": "error",
     "radix": "error",
     "require-await": "error",
     "vars-on-top": "off",
@@ -107,8 +110,8 @@ module.exports = {
     "no-catch-shadow": "off",
     "no-label-var": "error",
     "no-restricted-globals": "error",
-    "no-shadow-restricted-names": "error",
     "no-shadow": "off",
+    "no-shadow-restricted-names": "error",
     "no-undef-init": "error",
     "no-undefined": "off",
     "no-use-before-define": "error",
@@ -153,14 +156,14 @@ module.exports = {
     "lines-around-comment": "off",
     "lines-around-directive": "error",
     "max-depth": "error",
-    "max-len": ["warn", { "code": 120 }],
+    "max-len": ["warn", { "code": 120, "ignoreStrings": true }],
     "max-lines": ["warn", { "skipBlankLines": true, "max": 300}],
     "max-nested-callbacks": ["warn", { "max": 4 }],
     "max-params": ["warn", { "max": 5 }],
-    "max-statements-per-line": ["error", { "max": 3 }],
     "max-statements": "off",
+    "max-statements-per-line": ["error", { "max": 3 }],
     "multiline-ternary": "off",
-    "new-cap": "warn",
+    "new-cap": "off", // handled by babel plugin
     "new-parens": "error",
     "newline-after-var": "off",
     "newline-before-return": "off",
@@ -171,9 +174,10 @@ module.exports = {
     "no-inline-comments": "off",
     "no-lonely-if": "error",
     "no-mixed-operators": "error",
+    "no-multi-assign": "error",
     "no-multiple-empty-lines": "error",
-    "no-new-object": "error",
     "no-nested-ternary": "error",
+    "no-new-object": "error",
     "no-plusplus": "warn",
     "no-restricted-syntax": "off",
     "no-tabs": "error",
@@ -181,18 +185,19 @@ module.exports = {
     "no-trailing-spaces": "error",
     "no-unneeded-ternary": "error",
     "no-whitespace-before-property": "error",
-    "object-curly-newline": "off",
+    "nonblock-statement-body-position": "error",
+    "object-curly-newline": "off", // handled by babel plugin
     "object-curly-spacing": ["warn", "always", { "arraysInObjects": false }],
     "object-property-newline": "off",
-    "one-var-declaration-per-line": "off",
     "one-var": ["error", "never"],
+    "one-var-declaration-per-line": "off",
     "operator-assignment": "error",
     "operator-linebreak": "off",
     "padded-blocks": "off",
     "quote-props": ["error", "consistent-as-needed"],
     "quotes": ["error", "single"],
     "require-jsdoc": "off",
-    "semi": "error",
+    "semi": "off", // handled by babel plugin
     "semi-spacing": "error",
     "sort-keys": "warn",
     "sort-vars": "off",
@@ -202,6 +207,7 @@ module.exports = {
     "space-infix-ops": "error",
     "space-unary-ops": "error",
     "spaced-comment": "off",
+    "template-tag-spacing": "error",
     "unicode-bom": "error",
     "wrap-regex": "error",
 
@@ -220,6 +226,7 @@ module.exports = {
     "object-shorthand": ["error", "always"],
     "prefer-arrow-callback": "off",
     "prefer-const": "error",
+    "prefer-destructuring": ["error", { "array": false }],
     "prefer-numeric-literals": "error",
     "prefer-rest-params": "error",
     "prefer-spread": "error",
@@ -230,6 +237,12 @@ module.exports = {
     "template-curly-spacing": "error",
     "yield-star-spacing": "error",
 
+    // babel *******************************************************************
+    "babel/new-cap": ["warn", { "capIsNewExceptions": ["Intercom", "OnClickOutside"] }],
+    "babel/no-invalid-this": "error",
+    "babel/object-curly-spacing": ["error", "always", { "arraysInObjects": true }],
+    "babel/semi": "error",
+
     // immutable ***************************************************************
     "immutable/no-mutation": "off",
 
@@ -238,8 +251,8 @@ module.exports = {
     "flowtype/no-primitive-constructor-types": "error",
     "flowtype/object-type-delimiter": "error",
     "flowtype/require-variable-type": "off",
-    "flowtype/sort-keys": "error",
     "flowtype/semi": ["error", "always"],
+    "flowtype/sort-keys": "error",
 
     // import ******************************************************************
     // static analysis
@@ -303,13 +316,13 @@ module.exports = {
     "react/jsx-max-props-per-line": ["error", { "maximum": 4 }],
     "react/jsx-no-bind": ["warn", { "ignoreRefs": true }],
     "react/jsx-no-comment-textnodes": "error",
-    "rezct/jsx-no-string-literals": "off",
     "react/jsx-no-target-blank": "error",
     "react/jsx-pascal-case": "warn",
     "react/jsx-sort-props": "error",
     "react/jsx-space-before-closing": ["error", "always"],
     "react/jsx-tag-spacing": "error",
     "react/jsx-wrap-multilines": "error",
+    "rezct/jsx-no-string-literals": "off",
 
     // react rules
     "react/forbid-component-props": "off",
