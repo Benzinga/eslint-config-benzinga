@@ -5,6 +5,7 @@ module.exports = {
     "allowImportExportEverywhere": false
   },
   "plugins": [
+    "ava",
     "babel",
     "flowtype",
     "immutable",
@@ -21,6 +22,7 @@ module.exports = {
   },
   "extends": [
     "eslint:recommended",
+    "plugin:ava/recommended",
     "plugin:flowtype/recommended",
     "plugin:lodash/recommended",
     "plugin:react/recommended"
