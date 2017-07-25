@@ -154,7 +154,7 @@ module.exports = {
     "key-spacing": ["error", { "beforeColon": false, "mode": "minimum" }],
     "keyword-spacing": "error",
     "line-comment-position": "off",
-    "linebreak-style": "off",
+    "linebreak-style": "error",
     "lines-around-comment": "off",
     "lines-around-directive": "error",
     "max-depth": "error",
@@ -196,7 +196,7 @@ module.exports = {
     "operator-assignment": "error",
     "operator-linebreak": "off",
     "padded-blocks": "off",
-    "quote-props": ["error", "consistent-as-needed"],
+    "quote-props": ["error", "consistent", { "numbers": false }],
     "quotes": ["error", "single"],
     "require-jsdoc": "off",
     "semi": "off", // handled by babel plugin
@@ -251,6 +251,7 @@ module.exports = {
     // flowtype ****************************************************************
     "flowtype/no-dupe-keys": "error",
     "flowtype/no-primitive-constructor-types": "error",
+    "flowtype/no-types-missing-file-annotation": "off",
     "flowtype/object-type-delimiter": "error",
     "flowtype/require-variable-type": "off",
     "flowtype/semi": ["error", "always"],
@@ -298,6 +299,7 @@ module.exports = {
     "lodash/identity-shorthand": ["error", "always"],
     "lodash/matches-prop-shorthand": ["error", "never"],
     "lodash/matches-shorthand": ["error", "always"],
+    "lodash/path-style": ["error", "array"],
     "lodash/prefer-lodash-method": "off",
     "lodash/prefer-lodash-typecheck": "off",
     "lodash/prefer-noop": "off",
@@ -363,7 +365,7 @@ module.exports = {
     "react/prefer-es6-class": "error",
     "react/prefer-stateless-function": ["error", { "ignorePureComponents": true }],
     "react/prop-types": "off", // FlowType handles this
-    "react/require-default-props": "warn",
+    "react/require-default-props": "off",
     "react/require-optimization": "warn",
     "react/self-closing-comp": "error",
     "react/void-dom-elements-no-children": "error",
