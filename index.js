@@ -305,6 +305,7 @@ module.exports = {
     // JSX rules
     "react/jsx-boolean-value": "error",
     "react/jsx-closing-bracket-location": ["warn", "tag-aligned"],
+    "react/jsx-closing-tag-location": "error",
     "react/jsx-curly-spacing": ["warn", "never"],
     "react/jsx-equals-spacing": "error",
     "react/jsx-filename": "off",
@@ -316,16 +317,33 @@ module.exports = {
     "react/jsx-max-props-per-line": ["error", { "maximum": 4 }],
     "react/jsx-no-bind": ["warn", { "ignoreRefs": true }],
     "react/jsx-no-comment-textnodes": "error",
+    "react/jsx-no-literals": "off",
     "react/jsx-no-target-blank": "error",
     "react/jsx-pascal-case": "warn",
     "react/jsx-sort-props": "error",
     "react/jsx-space-before-closing": ["error", "always"],
     "react/jsx-tag-spacing": "error",
     "react/jsx-wrap-multilines": "error",
-    "rezct/jsx-no-string-literals": "off",
 
     // react rules
+    "react/default-props-match-prop-types": "error",
     "react/forbid-component-props": "off",
+    "react/forbid-elements": ["error", { "forbid": [
+      "article",
+      "aside",
+      "details",
+      "figcaption",
+      "figure",
+      "footer",
+      "header",
+      "main",
+      "mark",
+      "nav",
+      "section",
+      "summary",
+      "time"
+    ]}],
+    "react/forbid-foreign-prop-types": "error",
     "react/forbid-propTypes": "off", // FlowType handles this
     "react/no-array-index-key": "error",
     "react/no-children-prop": "error",
@@ -334,8 +352,10 @@ module.exports = {
     "react/no-did-mount-set-state": ["error", "disallow-in-func"],
     "react/no-did-update-set-state": ["error", "disallow-in-func"],
     "react/no-multi-comp": ["error", { "ignoreStateless": true }],
+    "react/no-redundant-should-component-update": "error",
     "react/no-set-state": "off",
     "react/no-string-refs": "error",
+    "react/no-will-update-state": ["error", "disallow-in-func"],
     "react/no-unescaped-entities": "off",
     "react/no-unused-prop-types": "off", // FlowType handles this
     "react/prefer-es6-class": "error",
@@ -344,6 +364,7 @@ module.exports = {
     "react/require-default-props": "warn",
     "react/require-optimization": "warn",
     "react/self-closing-comp": "error",
+    "react/void-dom-elements-no-children": "error",
     "react/sort-comp": [ "error", { "order": [ "type-annotations", "static-methods", "lifecycle", "everything-else", "render" ] } ],
     "react/sort-prop-types": "off", // FlowType makes irrelevant
     "react/style-prop-object": "error"
