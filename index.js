@@ -363,7 +363,7 @@ module.exports = {
     "react/no-redundant-should-component-update": "error",
     "react/no-set-state": "off",
     "react/no-string-refs": "error",
-    "react/no-will-update-state": ["error", "disallow-in-func"],
+    "react/no-will-update-set-state": ["error", "disallow-in-func"],
     "react/no-unescaped-entities": "off",
     "react/no-unused-prop-types": "off", // FlowType handles this
     "react/prefer-es6-class": "error",
