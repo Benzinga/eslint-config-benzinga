@@ -147,7 +147,7 @@ module.exports = {
     "func-names": "off",
     "func-style": "off",
     "id-blacklist": "off",
-    "id-length": ["error", { "min": 2, "exceptions": ["i", "x", "y", "a", "b", "_"] }],
+    "id-length": ["error", { "min": 2, "exceptions": ["x", "y", "a", "b", "_", "t"] }],
     "id-match": "off",
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "jsx-quotes": "error",
@@ -301,6 +301,7 @@ module.exports = {
 
     // lodash ******************************************************************
     "lodash/identity-shorthand": ["error", "always"],
+    "lodash/import-scope": ["error", "member"], // we use the babel plugin
     "lodash/matches-prop-shorthand": ["error", "never"],
     "lodash/matches-shorthand": ["error", "always"],
     "lodash/path-style": ["error", "array"],
@@ -314,7 +315,7 @@ module.exports = {
     "react/jsx-boolean-value": "error",
     "react/jsx-closing-bracket-location": ["warn", "tag-aligned"],
     "react/jsx-closing-tag-location": "error",
-    "react/jsx-curly-spacing": ["warn", "never"],
+    "react/jsx-curly-spacing": ["warn", "never", { "arraysInObjects": true }],
     "react/jsx-equals-spacing": "error",
     "react/jsx-filename": "off",
     "react/jsx-first-prop-new-line": ["error", "multiline"],
