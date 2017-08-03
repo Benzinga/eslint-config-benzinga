@@ -1,6 +1,6 @@
 {
   "name": "@benzinga/eslint-config-benzinga",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Benzinga's base JS ESLint config, following our styleguide",
   "main": "index.js",
   "repository": {
@@ -25,10 +25,10 @@
   },
   "homepage": "https://github.com/Benzinga/eslint-config-benzinga",
   "devDependencies": {
-    "eslint": "^3.17.1"
+    "eslint": "^4.3.0"
   },
   "dependencies": {
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^7.2.3",
     "eslint-plugin-ava": "^4.2.1",
     "eslint-plugin-babel": "^4.1.1",
     "eslint-plugin-flowtype": "^2.35.0",
@@ -39,6 +39,6 @@
     "eslint-plugin-react": "^7.1.0"
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">= 8"
   }
 }
