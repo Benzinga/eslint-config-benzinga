@@ -329,7 +329,6 @@ module.exports = {
     "react/jsx-no-target-blank": "error",
     "react/jsx-pascal-case": "warn",
     "react/jsx-sort-props": "error",
-    "react/jsx-space-before-closing": ["error", "always"],
     "react/jsx-tag-spacing": "error",
     "react/jsx-wrap-multilines": "error",
 
