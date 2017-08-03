@@ -181,7 +181,7 @@ module.exports = {
     "no-nested-ternary": "error",
     "no-new-object": "error",
     "no-plusplus": "warn",
-    "no-restricted-syntax": "off",
+    "no-restricted-syntax": ["error", "BinaryExpression[operator='in']"],
     "no-tabs": "error",
     "no-ternary": "off",
     "no-trailing-spaces": "error",
