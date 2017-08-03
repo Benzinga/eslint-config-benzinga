@@ -333,7 +333,7 @@ module.exports = {
     "react/jsx-wrap-multilines": "error",
 
     // react rules
-    "react/default-props-match-prop-types": "error",
+    "react/default-props-match-prop-types": "off",
     "react/forbid-component-props": "off",
     "react/forbid-elements": ["error", { "forbid": [
       "article",
