@@ -189,7 +189,7 @@ module.exports = {
     "no-whitespace-before-property": "error",
     "nonblock-statement-body-position": "error",
     "object-curly-newline": "off", // handled by babel plugin
-    "object-curly-spacing": ["warn", "always", { "arraysInObjects": false }],
+    "object-curly-spacing": ["warn", "always", { "arraysInObjects": true }],
     "object-property-newline": "off",
     "one-var": ["error", "never"],
     "one-var-declaration-per-line": "off",
@@ -315,7 +315,7 @@ module.exports = {
     "react/jsx-boolean-value": "error",
     "react/jsx-closing-bracket-location": ["warn", "tag-aligned"],
     "react/jsx-closing-tag-location": "error",
-    "react/jsx-curly-spacing": ["warn", "never", { "arraysInObjects": true }],
+    "react/jsx-curly-spacing": ["warn", "never"],
     "react/jsx-equals-spacing": "error",
     "react/jsx-filename": "off",
     "react/jsx-first-prop-new-line": ["error", "multiline"],
